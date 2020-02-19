@@ -29,7 +29,7 @@ public class Linkedlist {
     public void insertAtFirst(int value) {
         Node n = new Node();
         n.setData(value);
-        n.setNext(head);// it will works in both the case empty or non-empty
+        n.setNext(head);
         head = n;
         size++;
     }
