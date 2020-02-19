@@ -59,6 +59,13 @@ public class Main {
                     System.out.println("enter the number for searching");
                     int x = scanner.nextInt();
                     linkedlist.search(x);
+                    if (linkedlist.search(x)) {
+                        System.out.println("true element " + x + " is present");
+                    } else {
+                        System.out.println("false element " + x + " is not present ");
+                    }
+                    break;
+
                 case 9:
                     flag = false;
                     break;
