@@ -29,7 +29,7 @@ public class Linkedlist {
     public void insertAtFirst(int value) {
         Node n = new Node();
         n.setData(value);
-        n.setNext(head);// it will works in both the case empty or non-empty
+        n.setNext(head);
         head = n;
         size++;
     }
@@ -43,7 +43,7 @@ public class Linkedlist {
             head = n;
         } else {
 
-            while (temp.getNext()!= null) {
+            while (temp.getNext() != null) {
                 temp = temp.getNext();
                 temp.setNext(n);
 
@@ -126,22 +126,29 @@ public class Linkedlist {
 
     }
 
-
-
-   public  void printList(){
+    public void printList() {
         System.out.println("mylist:");
-        if(head==null){
+        if (head == null) {
             System.out.println("empty list");
-        }
-        else{
-            Node temp=head;
-            while(temp!=null){
-                System.out.print(temp.getData()+"--->");
-                temp=temp.getNext();
+        } else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.getData() + "--->");
+                temp = temp.getNext();
             }
             System.out.println("null");
 
         }
+    }
+
+    public boolean search(Node head, int x) {
+
+        while (head != null) {
+            if (head.getData() == x)
+                return true;
+            head = head.getNext();
+        }
+        return false;
     }
 
 }
