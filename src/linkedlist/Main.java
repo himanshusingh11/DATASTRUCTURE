@@ -16,7 +16,8 @@ public class Main {
             System.out.println("5. Delete Last item from the list ");
             System.out.println("6. Delete  item from the list with given position ");
             System.out.println("7. Print List ");
-            System.out.println("8. Exit");
+            System.out.println("8. Search an item in the list ");
+            System.out.println("9. Exit");
             System.out.println("Enter your choice");
             System.out.println();
             int choice = scanner.nextInt();
@@ -53,8 +54,12 @@ public class Main {
                     break;
                 case 7:
                     linkedlist.printList();
-                   break;
+                    break;
                 case 8:
+                    System.out.println("enter the number for searching");
+                    int x = scanner.nextInt();
+                    linkedlist.search(x);
+                case 9:
                     flag = false;
                     break;
                 default:

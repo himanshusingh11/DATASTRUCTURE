@@ -141,12 +141,13 @@ public class Linkedlist {
         }
     }
 
-    public boolean search(Node head, int x) {
+    public boolean search(int x) {
+        Node temp = head;
 
-        while (head != null) {
-            if (head.getData() == x)
+        while (temp != null) {
+            if (temp.getData() == x)
                 return true;
-            head = head.getNext();
+            temp = temp.getNext();
         }
         return false;
     }
